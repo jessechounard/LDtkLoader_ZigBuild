@@ -1,0 +1,18 @@
+.{
+    .name = .LDtkLoader,
+    .version = "1.5.3",
+    .minimum_zig_version = "0.14.0",
+    .fingerprint = 0x4ce40cc52ff81f82,
+    .dependencies = .{
+        .LDtkLoader = .{
+            .url = "git+https://github.com/jessechounard/LDtkLoader#6cf06bc8d613ee69e9d434de31c6ea966fb9d35e",
+            .hash = "N-V-__8AAPckIgAxaW0PrMH6FR_hCHQqugC7HmrCoEF91KhT",
+        },
+    },
+    .paths = .{
+        "LICENSE",
+        "README.md",
+        "build.zig",
+        "build.zig.zon",
+    },
+}
