@@ -20,11 +20,16 @@ exe.root_module.linkLibrary(ldtk_lib);
 
 Finally, in your C++ file, you can use the library:
 ```cpp
-#include <stdio.h>
+#include <LDtkLoader/Project.hpp>
 
 int main() {
-  // todo: add example
-  return 0;
+    ldtk::Project ldtkProject;
+    ldtkProject.loadFromFile("test.ldtk");
+    const auto &world = ldtkProject.getWorld();
+  
+    // use world here
+
+    return 0;
 }
 ```
 
