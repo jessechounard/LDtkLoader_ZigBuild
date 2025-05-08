@@ -5,7 +5,7 @@
     .fingerprint = 0x4ce40cc52ff81f82,
     .dependencies = .{
         .LDtkLoader = .{
-            .url = "git+https://github.com/jessechounard/LDtkLoader#6cf06bc8d613ee69e9d434de31c6ea966fb9d35e",
+            .url = "git+https://github.com/Madour/LDtkLoader#c3ddf6e82e4e71ad49da3f3bb3593f50baa2dedc",
             .hash = "N-V-__8AAPckIgAxaW0PrMH6FR_hCHQqugC7HmrCoEF91KhT",
         },
     },

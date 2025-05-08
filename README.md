@@ -34,9 +34,6 @@ int main() {
 ```
 
 ## Notes
-### Target git repo
-Currently the original LDtkLoader repo won't build for me in Clang, so instead of pointing at that, I've created a fork where I've commented out a few lines and we're pointing at the fork instead. I've created an issue there. If this is resolved, I'll get rid of my fork and point to the original.
-
 ### Version number
 I normally try to match the release version of the library I'm bundling with zig, since I'm not adding anything to it. Unfortunately, LDtkLoader uses a four number versioning system (major.minor.patch.tweak) while zig build versions only seem to support three number semantic versioning. So I've dropped the tweak version.
 
