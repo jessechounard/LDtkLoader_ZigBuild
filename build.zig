@@ -2,12 +2,15 @@ const std = @import("std");
 
 pub fn build(b: *std.Build) void {
     const upstream = b.dependency("LDtkLoader", .{});
-    const lib = b.addStaticLibrary(.{
+    const lib = b.addLibrary(.{
         .name = "LDtkLoader",
-        .target = b.standardTargetOptions(.{}),
-        .optimize = b.standardOptimizeOption(.{}),
+        .linkage = .static,
+        .root_module = b.createModule(.{
+            .target = b.standardTargetOptions(.{}),
+            .optimize = b.standardOptimizeOption(.{}),
+            .link_libcpp = true,
+        }),
     });
-    lib.linkLibCpp();
     lib.addIncludePath(upstream.path("include"));
     lib.addIncludePath(b.path("include"));
     lib.addCSourceFiles(.{
